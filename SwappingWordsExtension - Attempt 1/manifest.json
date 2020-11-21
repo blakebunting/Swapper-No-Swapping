@@ -2,7 +2,7 @@
   "name": "Big Donny",
   "manifest_version": 2,
   "version": "1.0",
-  "description": "Changes Donald Trumps name to Big Donny",
+  "description": "Changes Donald Trumps name",
   "author": "Blake Bunting",
 
   "content_scripts":
@@ -15,6 +15,7 @@
     }
   ],
   "browser_action": {
+      "default_popup": "popup.html",
       "default_icon": "penis.png"
   }
 }

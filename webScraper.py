@@ -16,7 +16,6 @@ results=[]
 
 #now I'm just messing around to see what I can do with the data
 for a in soup.findAll('p'):
-    print(a)
     results.append(a)
 
 #store data in csv file to easily manipulate

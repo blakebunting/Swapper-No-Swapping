@@ -1,10 +1,9 @@
 {
 	"manifest_version": 2,
 
-	"name": "Hello World",
+	"name": "DaTa ScApInG iS sO cOoL",
 	"description": "The coolest chrome extension ever",
 	"version": "1.0",
-	"author": "@thomasforth",
 
 	"background": {
 		"scripts": ["popup.js"],
@@ -12,9 +11,8 @@
 	},
 
 	"permissions": [
-        "tabs",
-        "http://*/",
-        "https://*/"
+		"tabs",
+		"<all_urls>"
     ],
 	"browser_action": {
 		"default_icon": "logo.png",

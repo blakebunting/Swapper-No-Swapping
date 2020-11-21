@@ -18,7 +18,7 @@ soup = BeautifulSoup(content, features="html.parser")
 results=[] #array of arrays, used to tell count
 
 # list of 'common words to not include in word count
-commonWords = [' ','and','an','the','this','was','a','with','in','for','that','of','is','may','on','ways','like','our','as','about','every']
+commonWords = [' ','and','us','at','spaces','','by','we','admin','an','to','the','this','was','a','with','in','for','that','of','is','may','on','ways','like','our','as','about','every']
 
 #go through every element on website
 for a in soup.findAll():
@@ -47,19 +47,33 @@ for word in results:
         # Add the word to dictionary with count 1 
         d[word] = 1
 
-
 i=0
-end=[]
-while i!=5:
-    values = list(d.values())
-    m = max(values)
+end=dict()
+
+#loop 5 times to get 5 most common words
+while i!=10:
+    ci=0
+    #get current most popular word
+    maximum = 0
+    max_key = None
+    for k in d:
+        if d[k] > maximum:
+            maximum = d[k]
+            max_key = k
+
+
+    #loop through commonWords
     for a in commonWords:
-        if d.keys(m) == a:
-            del d[m]
-        else:
-            i+=1
-            end.append(d[m])
-            del d[m]
+        #if its a common word get it out of the list
+        if max_key == a:
+            d.pop(max_key)
+            ci+=1
+
+    #if its not add it to new list and take out of old list
+    if ci==0:
+        end[maximum] = max_key
+        d.pop(max_key)
+        i+=1
         
 
 print(end)

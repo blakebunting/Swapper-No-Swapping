@@ -2,6 +2,7 @@
 from selenium import webdriver
 from bs4 import BeautifulSoup
 import pandas as pd
+import re
 
 #this is also dependant on where your chrome webdriver is, find it with command F
 driver = webdriver.Chrome("/Users/ellio/Downloads/chromedriver")
@@ -16,7 +17,10 @@ results=[]
 
 #now I'm just messing around to see what I can do with the data
 for a in soup.findAll('p'):
-    results.append(a)
+    a = a.get_text().split()
+    for word in a:
+        if word == 'the':
+            results.append(word)
 
 #store data in csv file to easily manipulate
 df = pd.DataFrame({'Paragraph tags':results}) 

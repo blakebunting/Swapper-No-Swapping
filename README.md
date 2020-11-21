@@ -1,2 +1,0 @@
-# HackWestern
-Team Repo

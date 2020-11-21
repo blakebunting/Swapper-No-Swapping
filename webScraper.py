@@ -14,13 +14,17 @@ driver.get('http://www.ibuku.com/')
 content = driver.page_source
 soup = BeautifulSoup(content, features="html.parser")
 results=[]
+theCount=0
 
 #now I'm just messing around to see what I can do with the data
-for a in soup.findAll('p'):
+for a in soup.findAll():
     a = a.get_text().split()
     for word in a:
         if word == 'the':
+            theCount+=1
             results.append(word)
+
+print(theCount)
 
 #store data in csv file to easily manipulate
 df = pd.DataFrame({'Paragraph tags':results}) 

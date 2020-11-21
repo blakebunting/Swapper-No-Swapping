@@ -31,10 +31,11 @@ for a in soup.findAll():
         word = re.sub('[\W_]+', '', word) 
         results.append(word)  
 
+
+
+
 # Create an empty dictionary 
 d = dict() 
-  
-
   
 # Iterate over each word in line 
 for word in results: 
@@ -45,22 +46,23 @@ for word in results:
     else: 
         # Add the word to dictionary with count 1 
         d[word] = 1
+
+
 i=0
-end[]
-while i!=5
+end=[]
+while i!=5:
     values = list(d.values())
     m = max(values)
     for a in commonWords:
-    if(d.keys(m) == a):
-        #take item out of dictionary
-    else{
-        #add 1 to i
-        #take item out of dictionary 
-        #add item to return list
-    }
+        if d.keys(m) == a:
+            del d[m]
+        else:
+            i+=1
+            end.append(d[m])
+            del d[m]
+        
 
-
-    #print contents of return list
+print(end)
 
 #store data in csv file to easily manipulate
 #df = pd.DataFrame({'Paragraph tags':results}) 

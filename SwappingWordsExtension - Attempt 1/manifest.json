@@ -4,7 +4,9 @@
   "version": "1.0",
   "description": "Changes Donald Trumps name",
   "author": "Blake Bunting",
-
+  "background": {
+    "scripts": ["popup.js"]
+  },
   "content_scripts":
   [
     {

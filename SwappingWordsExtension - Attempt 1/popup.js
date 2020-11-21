@@ -1,11 +1,7 @@
-//import { show } from "./content_script.js";
-document.addEventListener('DOMContentLoaded',documentEvents, false);
-
-function documentEvents(){
-    document.getElementById('bttn').addEventListener('click',function () {
-        let swapout = document.getElementById('swappedout').value;
-        let swapin = document.getElementById('swappedin').value;
-        alert(swapout, swapin);
-        //show(swapout,swapin);
-    });
-}
+document.getElementById('bttn').addEventListener('click',function () {
+    chrome.tabs.query({ active: true }, function(tabs) {
+        let swapOut = document.getElementById('swappedout').value;
+        let swapIn = document.getElementById('swappedin').value;
+        chrome.tabs.sendMessage(tabs[0].id, { "swappedout": swapOut, "swappedin": swapIn });
+    })
+});

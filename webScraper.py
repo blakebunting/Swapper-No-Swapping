@@ -22,7 +22,7 @@ soup = BeautifulSoup(content, features="html.parser")
 results=[] #array of arrays, used to tell count
 
 # list of 'common words to not include in word count
-commonWords = [' ','and','us','at','spaces','','my','what','if','other','using','can','get','more','do','value','text','up','but','input','not','or','i','from','how','you','your','by','we','admin','an','to','the','this','was','a','with','in','for','that','of','is','may','on','ways','like','our','as','about','every']
+commonWords = [' ','and','us','at','spaces','','my','what','if','other','sign','page','file','way','it','be','copy','data','html','nov','button','name','policy','click','box','textbox','using','can','get','more','do','value','text','up','but','input','not','or','i','from','how','you','your','by','we','admin','an','to','the','this','was','a','with','in','for','that','of','is','may','on','ways','like','our','as','about','every']
 
 #go through every element on website
 for a in soup.findAll():
@@ -82,4 +82,3 @@ while i<11:
 df = pd.DataFrame({'most common words': end.values(), 'occurance' : end.keys()}) 
 df.to_csv('results.csv', index=False, encoding='utf-8')
 print("done")
-

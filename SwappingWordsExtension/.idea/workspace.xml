@@ -4,7 +4,6 @@
     <list default="true" id="09f227ca-659e-4a7c-af64-ab93e3756baa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../SwappingWordsExtension - Attempt 1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SwappingWordsExtension - Attempt 1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/content_script.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +63,7 @@
       <updated>1605936966980</updated>
       <workItem from="1605936969174" duration="3315000" />
       <workItem from="1605967323045" duration="8659000" />
-      <workItem from="1605980525403" duration="1792000" />
+      <workItem from="1605980525403" duration="2109000" />
     </task>
     <servers />
   </component>

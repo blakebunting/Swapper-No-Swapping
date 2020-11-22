@@ -1,9 +1,9 @@
 {
-  "name": "Big Donny",
+  "name": "WordSwap",
   "manifest_version": 2,
   "version": "1.0",
-  "description": "Changes Donald Trumps name",
-  "author": "Blake Bunting",
+  "description": "",
+  "author": "",
   "background": {
     "scripts": ["popup.js"]
   },

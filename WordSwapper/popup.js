@@ -1,3 +1,4 @@
+//submit button
 document.getElementById('bttn').addEventListener('click',function () {
     chrome.tabs.query({ active: true }, function(tabs) {
         let swapOut = document.getElementById('swappedout').value;
@@ -7,8 +8,9 @@ document.getElementById('bttn').addEventListener('click',function () {
     })
 });
 
+//clear button
 window.addEventListener("load", event => {
     document.getElementById("reload").onclick = function(){
-        location.reload(true);
+        location.reload();
     }
 })

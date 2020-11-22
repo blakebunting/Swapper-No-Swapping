@@ -1,9 +1,9 @@
 {
-  "name": "WordSwap",
+  "name": "Swapper",
   "manifest_version": 2,
-  "version": "1.0",
-  "description": "",
-  "author": "",
+  "version": "0.0.1",
+  "description": "Chrome extention that allows any user to easily swap a word or phrase with another word or phrase.",
+  "author": "Da Vinci",
   "background": {
     "scripts": ["popup.js"]
   },
@@ -18,6 +18,6 @@
   ],
   "browser_action": {
       "default_popup": "popup.html",
-      "default_icon": "penis.png"
+      "default_icon": "notAPenis.png"
   }
 }

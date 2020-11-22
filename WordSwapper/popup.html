@@ -3,24 +3,26 @@
 
 <head>
     <title>Data Scraping Test</title>
+    <link rel = "stylesheet" href = "styles.css">
 </head>
 
 <body>
 
     <h3>Welcome to Word Swapper!</h3>
 
-    <p>What word should we swap:</p>
-    <input type="text" name="swappedout" id="swappedout"/>
+    <p>Word/phrase to swap:</p>
+    <input type="text" name="swappedout" id="swappedout" class="forms"/>
 
-    <p>What word should we swap too:</p>
-    <input type="text" name="swappedin" id="swappedin"><br>
+    <p>Replace with:</p>
+    <input type="text" name="swappedin" id="swappedin" class="forms"><br>
 
     <p>Add a link to your favourite photo: (optional)</p>
-    <input type="text" name="pic" id="pic"><br>
+    <input type="text" name="pic" id="pic" class="forms"><br>
 
-    <input type="button" id="bttn" value="submit" name="Swap!"/>
-    <input type="button" id="reload" value="clear" name="refresh"/>
+    <input type="button" id="bttn" value="Swap!" name="Swap!" class="bttn"/>
+    <input type="button" id="reload" value="Refresh!" name="refresh" class="bttn"/>
 
     <script defer src="popup.js"></script>
+
 </body>
 </html>

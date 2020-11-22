@@ -1,6 +1,3 @@
-let image = document.createElement('img'); 
-
-
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
     //Word Swap
@@ -11,12 +8,16 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         }
     }
 
+
     //Image Swap
-    image.src = request.picture;
-    const img = document.querySelectorAll('img');
-    for(let i=0;i<img.length;i++){
-        img[i].src =  image.src;
-        img[i].srcset = image.src;
-        console.log(img[i]);
+    let image = document.createElement('img'); 
+    if(request.picture){
+        image.src = request.picture;
+        const img = document.querySelectorAll('img');
+        for(let i=0;i<img.length;i++){
+            img[i].src =  image.src;
+            img[i].srcset = image.src;
+            console.log(img[i]);
+        }
     }
 });
